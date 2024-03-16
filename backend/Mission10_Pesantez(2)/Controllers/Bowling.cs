@@ -16,14 +16,19 @@ namespace Mission10_Pesante_2_.Controllers
             _bowlerRepository = temp;
         }
 
+
+        // HTTP GET request handler to retrieve a list of bowlers
+
         [HttpGet]
-        public  IEnumerable<Bowler> Get() 
+
+        // Retrieve bowlers from the repository where the team name is either "Marlins" or "Sharks"
+
+        public IEnumerable<Bowler> Get() 
         {
             var bowlers = _bowlerRepository.Bowlers
                 .Where(x => x.Team.TeamName == "Marlins" ||  x.Team.TeamName == "Sharks").ToArray();
-            
 
-
+           // Return the retrieved bowlers
             return bowlers;        
                     
       }

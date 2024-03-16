@@ -1,3 +1,4 @@
+// Function component representing the header of the application
 function Header() {
   return (
     <div>

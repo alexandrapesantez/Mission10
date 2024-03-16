@@ -1,3 +1,4 @@
+// Definition of the Bowler type
 export type Bowler = {
   bowlerId: number;
   bowlerLastName: string;
